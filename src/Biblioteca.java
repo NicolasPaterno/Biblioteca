@@ -48,11 +48,11 @@ public class Biblioteca {
         }
     }
 
-    //public void removerLivro(String titulo, int cod) {
-      //  for (Livro livro : livros) {
-        //    if (livro.getTitulo().equalsIgnoreCase(titulo) && livro.getCod() == cod) {
-          //      livro.excluir();
-            //}
-        //}
-    //}
+    public void removerLivro(String titulo, int cod) {
+        for (Livro livro : livros) {
+            if (livro.getTitulo().equalsIgnoreCase(titulo) && livro.getCod() == cod) {
+                livro.excluir();
+            }
+        }
+    }
 }

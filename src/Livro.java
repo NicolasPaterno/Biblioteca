@@ -9,6 +9,7 @@ public class Livro {
     private int quantidade;
     private int cod;
     private boolean emprestado;
+    private boolean excluir;
 
     // Construtor
     public Livro(String titulo, String autor, String genero, int ano, int cod) {
@@ -20,6 +21,7 @@ public class Livro {
         this.quantidade = quantidade;
         this.cod = cod;
         this.emprestado = false;
+        this.excluir = false;
     }
 
     // Getters e Setters
@@ -75,6 +77,10 @@ public class Livro {
         return emprestado;
     }
 
+    public boolean isExcluir() {
+        return excluir;
+    }
+
     public void emprestar() {
         if (!emprestado) {
             emprestado = true;
@@ -92,12 +98,17 @@ public class Livro {
             System.out.print("Livro: " + titulo + "Não está emprestado.");
         }
     }
-    // public void excluir(){
-    //   if(!excluir){
-    //      Livro(cod).clear();
-    //   }
-    //return;
-    // }
+     public void excluir(){
+       if(!excluir){
+          excluir = true;
+          Scanner sc = new Scanner(System.in);
+          System.out.print("digite o código do livro que deseja excluir");
+
+          //achar um jeito de pelo código excluir o livro
+           ;
+       }
+    return;
+     }
 
     @Override
     public String toString() {
