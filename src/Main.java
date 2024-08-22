@@ -51,7 +51,7 @@ public class Main {
                     int codCheck = sc.nextInt();
                     Livro livroEncontrado = biblioteca.buscaCod(codCheck);
                     if (livroEncontrado != null) {
-                        System.out.println("Livro encontrado: " + livroEncontrado.getTitulo() + "\\n" + livroEncontrado.getAutor() + "\\n" + livroEncontrado.getGenero() + "\\n" + livroEncontrado.getAno() + "\\n" + livroEncontrado.getCod());
+                        System.out.println("Livro encontrado com sucesso! \n" + livroEncontrado.toString());
                     }
                     break;
                 case 5:
@@ -61,7 +61,7 @@ public class Main {
                     biblioteca.removerLivro(codigoExcluir);
                     break;
                 case 6:
-
+                    System.exit(0);
                     break;
                 case 7:
                     System.out.println("Saindo");

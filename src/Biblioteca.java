@@ -21,9 +21,10 @@ public class Biblioteca {
     public Livro buscaCod(int cod) {
         for (Livro livro : livros) {
             if (livro.getCod() == cod) {
-                System.out.println(livro);
                 return livro;
             }
+            //achar uma forma do return imprimir livro toString
+
         }
         System.out.println("Código não encontrado!");
         return null; // Retorna null se nenhum livro com o código for encontrado
@@ -38,6 +39,7 @@ public class Biblioteca {
             System.out.println("Livros na biblioteca:");
             for (Livro livro : livros) {
                 System.out.println(livro);
+
             }
         }
     }
@@ -79,7 +81,7 @@ public class Biblioteca {
         if (resposta.equals("S")) {
             boolean removido = livros.remove(livroParaRemover);
             if (removido) {
-                System.out.println("Livro " + livroParaRemover.getTitulo()  + " (Código: " + cod + ") removido com sucesso!");
+                System.out.println("Livro " + livroParaRemover.getTitulo() + " (Código: " + cod + ") removido com sucesso!");
             } else {
                 System.out.println("Código não encontrado!");
             }
