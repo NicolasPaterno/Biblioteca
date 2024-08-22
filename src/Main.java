@@ -49,15 +49,18 @@ public class Main {
 
                     break;
                 case 4:
-                    // System.out.print("Código: ");
-                    //int codCheck;
-                    // codCheck = sc.nextInt();
-                    // if (biblioteca.buscaCod(codCheck) != 0) {
-
-                    //}
+                    System.out.print("Código: ");
+                    int codCheck = sc.nextInt();
+                    Livro livroEncontrado = biblioteca.buscaCod(codCheck);
+                    if (livroEncontrado != null) {
+                    System.out.println("Livro encontrado: " +  livroEncontrado.getTitulo() + "\\n" + livroEncontrado.getAutor() + "\\n" + livroEncontrado.getGenero() + "\\n" + livroEncontrado.getAno() + "\\n" + livroEncontrado.getCod());
+                    }
                     break;
                 case 5:
-                    //biblioteca.removerLivro();
+                    System.out.println("\ninsira o código do livro que deseja excluir:");
+                    int codigoExcluir = sc.nextInt();
+                    sc.nextLine();
+                    biblioteca.removerLivro(codigoExcluir);
                     break;
                 case 6:
 
