@@ -98,25 +98,28 @@ public class Livro {
             System.out.print("Livro: " + titulo + "Não está emprestado.");
         }
     }
-     public void excluir(){
-       if(!excluir){
-          excluir = true;
-          Scanner sc = new Scanner(System.in);
-          System.out.print("digite o código do livro que deseja excluir");
 
-          //achar um jeito de pelo código excluir o livro
-           ;
-       }
-    return;
-     }
+    public void excluir() {
+        if (!excluir) {
+            excluir = true;
+            Scanner sc = new Scanner(System.in);
+            System.out.print("digite o código do livro que deseja excluir");
+
+            //achar um jeito de pelo código excluir o livro
+            ;
+        }
+        return;
+    }
 
     @Override
     public String toString() {
-        return "Livro{" +
-                "Título='" + titulo + '\'' +
-                ", Autor='" + autor + '\'' +
-                ", Emprestado=" + (emprestado ? "Sim" : "Não") +
-                '}';
+        return "Título: " + titulo + "\n" +
+                " Autor: " + autor + "\n" +
+                " Gênero: " + genero + "\n" +
+                " Ano: " + ano + "\n" +
+                " Quantidade: " + quantidade + "\n" +
+                " Código: " + cod + "\n" +
+                " Disponível: " + (emprestado ? "Não" : "Sim") + "\n";
     }
 }
 

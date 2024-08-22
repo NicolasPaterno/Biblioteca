@@ -13,7 +13,7 @@ public class Biblioteca {
     // Método para adicionar um livro
     public void adicionarLivro(Livro livro) {
         livros.add(livro);
-        System.out.println("Livro" + livro.getTitulo() + "adicionado com sucesso!");
+        System.out.println("Livro: " + livro.getTitulo() + " adicionado com sucesso!");
 
     }
 
@@ -21,7 +21,8 @@ public class Biblioteca {
     public Livro buscaCod(int cod) {
         for (Livro livro : livros) {
             if (livro.getCod() == cod) {
-                return livro; // Retorna o livro se o código for encontrado
+                System.out.println(livro);
+                return livro;
             }
         }
         System.out.println("Código não encontrado!");

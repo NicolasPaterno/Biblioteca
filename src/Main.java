@@ -6,8 +6,6 @@ public class Main {
         Scanner sc = new Scanner(System.in);
 
 
-
-
         while (true) {
             System.out.println("\nMenu:");
             System.out.println("1. Adicionar Livro");
@@ -24,9 +22,9 @@ public class Main {
                 case 1:
                     System.out.println("Número de livros a serem listados: ");
                     int numeroAdd = sc.nextInt();
-                    sc.nextLine();
                     int i = 0;
                     while (i < numeroAdd) {
+                        sc.nextLine();
                         System.out.println("Título do Livro:");
                         String titulo = sc.nextLine();
                         System.out.println("Autor do Livro:");
@@ -53,7 +51,7 @@ public class Main {
                     int codCheck = sc.nextInt();
                     Livro livroEncontrado = biblioteca.buscaCod(codCheck);
                     if (livroEncontrado != null) {
-                    System.out.println("Livro encontrado: " +  livroEncontrado.getTitulo() + "\\n" + livroEncontrado.getAutor() + "\\n" + livroEncontrado.getGenero() + "\\n" + livroEncontrado.getAno() + "\\n" + livroEncontrado.getCod());
+                        System.out.println("Livro encontrado: " + livroEncontrado.getTitulo() + "\\n" + livroEncontrado.getAutor() + "\\n" + livroEncontrado.getGenero() + "\\n" + livroEncontrado.getAno() + "\\n" + livroEncontrado.getCod());
                     }
                     break;
                 case 5:
